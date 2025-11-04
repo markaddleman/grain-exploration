@@ -1,0 +1,6 @@
+[submodule "lib-sources/grain"]
+	path = lib-sources/grain
+	url = https://github.com/pyze/grain
+[submodule "lib-sources/macroexpand-2-demo"]
+	path = lib-sources/macroexpand-2-demo
+	url = https://github.com/pyze/macroexpand-2-demo

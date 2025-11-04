@@ -1,0 +1,13 @@
+.venv/
+.nrepl-port
+.clj-kondo
+.cpcache/
+.lsp/
+.calva/
+.idea/
+*.swp
+*.swo
+*~
+.DS_Store
+.env
+target/

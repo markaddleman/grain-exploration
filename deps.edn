@@ -1,0 +1,17 @@
+{:deps    {obneyai/grain-core            {:git/url   "https://github.com/ObneyAI/grain.git"
+                                          :sha       "fc7302311f88afb3eebbcb4d68d2046a91b00ad5"
+                                          :deps/root "projects/grain-core"}
+           obneyai/grain-dspy-extensions {:git/url   "https://github.com/ObneyAI/grain.git"
+                                          :sha       "fc7302311f88afb3eebbcb4d68d2046a91b00ad5"
+                                          :deps/root "projects/grain-dspy-extensions"}}
+
+ :aliases {:mcp   {:extra-deps {com.bhauman/clojure-mcp {:git/url "https://github.com/bhauman/clojure-mcp"
+                                                         :git/sha "cb54b28b80c0073f90a67ca9b4ec0cd0db424b26"}}
+                   :exec-fn    clojure-mcp.main/start-mcp-server
+                   :exec-args  {:port 9999}}
+           :nrepl {:extra-paths ["src" "test"]
+                   :extra-deps  {nrepl/nrepl                   {:mvn/version "1.5.1"}
+                                 cider/cider-nrepl             {:mvn/version "0.58.0"}
+                                 refactor-nrepl/refactor-nrepl {:mvn/version "3.11.0"}}
+                   :jvm-opts    ["-Djdk.attach.allowAttachSelf"]
+                   :main-opts   ["-m" "nrepl.cmdline" "--port" "9999" "--middleware" "[cider.nrepl/cider-middleware,refactor-nrepl.middleware/wrap-refactor]"]}}}
